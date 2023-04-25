@@ -1,0 +1,20 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\IndexController;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+Route::get('/', [IndexController::class, 'main'])->name('home');
+Route::post('/get-models', [IndexController::class, 'getModels'])->name('get_models');
+Route::post('/send-data', [IndexController::class, 'sendData'])->name('send_data');
